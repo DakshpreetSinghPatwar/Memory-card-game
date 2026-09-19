@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Memory Card Game</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="game-container">
+
+        <h1>🧠 Memory Card Game</h1>
+
+        <p class="subtitle">
+            Find all the matching pairs!
+        </p>
+
+        <div class="game-info">
+
+            <div class="info-box">
+                <span>⏱️ Time</span>
+                <strong id="timer">60</strong>
+            </div>
+
+            <div class="info-box">
+                <span>🎯 Moves</span>
+                <strong id="moves">0</strong>
+            </div>
+
+            <div class="info-box">
+                <span>🏆 Pairs</span>
+                <strong id="pairs">0 / 8</strong>
+            </div>
+
+        </div>
+
+        <div class="difficulty">
+
+            <button onclick="startGame('easy')">
+                Easy
+            </button>
+
+            <button onclick="startGame('medium')" class="active">
+                Medium
+            </button>
+
+            <button onclick="startGame('hard')">
+                Hard
+            </button>
+
+        </div>
+
+        <div id="game-board" class="game-board"></div>
+
+        <button class="restart-btn" onclick="startGame(currentDifficulty)">
+            🔄 Restart Game
+        </button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
